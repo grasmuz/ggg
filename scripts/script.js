@@ -21,7 +21,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
         alert('Пожалуйста, введите 4-значный код.');
         event.preventDefault();
     } else if (code === '1234') {
-        window.location.href = 'html/department.html';
+        window.location.href = '.../html/department.html';
         event.preventDefault();
     } else {
         alert('Неправильный код. Попробуйте еще раз.');
