@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документ</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.125rem;
+            background-color: #ffffff;
+            color: #333;
+            background-image: url('/img/15229725_v870-tang-39.jpg');
+            background-size: cover;
+        }
+
+        .span-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+            margin-left: 1px;
+        }
+
+        .popup {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: 80%;
+            border-radius: 6px;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #349d94;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .popup button:hover {
+            background-color: #277c6f;
+        }
+
+        .popup h2 {
+            text-align: center;
+        }
+
+        .button-title,
+        .item-title {
+            font-weight: bold;
+        }
+
+        .button-count,
+        .item-date {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .responsive-table-container {
+            overflow-x: auto;
+        }
+
+        .responsive-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .responsive-table th,
+        .responsive-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .responsive-table th {
+            background-color: #f2f2f2;
+        }
+
+        @media (max-width: 1200px) {
+            .responsive-table {
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .responsive-table {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .responsive-table {
+                font-size: 0.625rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="popup1" class="popup">
+        <h2>Анализ от 14.09.2023 12:40</h2>
+        <div class="span-column">
+            <span class="item-title">Пациент</span>
+            <span class="item-date">Меладзе Валерий Константинович, 30 лет</span>
+            <span class="item-title">Автор</span>
+            <span class="item-date">Врач</span>
+            <span class="item-title">Код</span>
+            <span class="item-date">В023.343.24</span>
+            <span class="item-title">Наименование анализа по тарификатору</span>
+            <span class="item-date">Отделение антител к тиреопероксидазе (а-ТПО) в сыворотке крови ИФА-методом</span>
+            <span class="item-title">Статус</span>
+            <span class="item-date">Принят в работу</span>
+        </div>
+        <div class="responsive-table-container">
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>Показатель</th>
+                        <th>Результат</th>
+                        <th>Норма</th>
+                        <th>Ед.изм.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Показатель">Показатель 1</td>
+                        <td data-label="Результат">Результат 1</td>
+                        <td data-label="Норма">Норма 1</td>
+                        <td data-label="Ед.изм.">Ед.изм. 1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Показатель">Показатель 2</td>
+                        <td data-label="Результат">Результат 2</td>
+                        <td data-label="Норма">Норма 2</td>
+                        <td data-label="Ед.изм.">Ед.изм. 2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Показатель">Показатель 3</td>
+                        <td data-label="Результат">Результат 3</td>
+                        <td data-label="Норма">Норма 3</td>
+                        <td data-label="Ед.изм.">Ед.изм. 3</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Показатель">Показатель 4</td>
+                        <td data-label="Результат">Результат 4</td>
+                        <td data-label="Норма">Норма 4</td>
+                        <td data-label="Ед.изм.">Ед.изм. 4</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Показатель">Показатель 5</td>
+                        <td data-label="Результат">Результат 5</td>
+                        <td data-label="Норма">Норма 5</td>
+                        <td data-label="Ед.изм.">Ед.изм. 5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button onclick="Exit('')">Закрыть</button>
+    </div>
+    <script>
+  function Exit() {
+    window.history.back();
+  }
+    </script>
+</body>
+</html>

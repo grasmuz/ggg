@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аутентификация</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="loginForm">
+        <h2>Вход в систему</h2>
+        <form id="myForm" method="post" action="{% url 'my_view' %}">
+            <div id="step1">
+                <label for="phone_number">Введите номер телефона</label>
+                <br>
+                <input type="text" id="phone_number" name="phone_number" placeholder="77777777777" pattern="\d{11}" required>
+                <br>
+                <label for="iin">Введите ИИН</label>
+                <br>
+                <input type="text" id="iin" name="iin" placeholder="444333222111" pattern="\d{12}" required>
+                <br>
+                <button type="button" id="submitButton">Отправить</button>
+            </div>
+      
+            <div id="step2" style="display:none;">
+                <label for="code">Введите 4-значный код</label>
+                <br>
+                <input type="text" id="code" name="code" pattern="\d{4}" required>
+                <button type="submit">Подтвердить</button>
+            </div>
+        </form>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
